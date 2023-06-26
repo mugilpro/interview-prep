@@ -3,6 +3,13 @@ package collections;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+//Condition                                              Required                        Not Required (But Allowed)
+//        x.equals(y) == true               x.hashCode() == y.hashCode()
+//        x.hashCode() == y.hashCode()                                                    x.equals(y) == true
+//        x.equals(y) == false                                                            no hashCode() requirements
+//        x.hashCode() != y.hashCode()          x.equals(y) == false
+
+
 public class Student {
     private String stateCode;
     private String collegeCode;
@@ -22,31 +29,24 @@ public class Student {
     public String getStateCode() {
         return stateCode;
     }
-
     public void setStateCode(String stateCode) {
         this.stateCode = stateCode;
     }
-
     public String getCollegeCode() {
         return collegeCode;
     }
-
     public void setCollegeCode(String collegeCode) {
         this.collegeCode = collegeCode;
     }
-
     public Long getSeqId() {
         return seqId;
     }
-
     public void setSeqId(Long seqId) {
         this.seqId = seqId;
     }
-
     public BigDecimal getFeeDue() {
         return feeDue;
     }
-
     public void setFeeDue(BigDecimal feeDue) {
         this.feeDue = feeDue;
     }

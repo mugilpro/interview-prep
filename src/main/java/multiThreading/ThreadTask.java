@@ -8,14 +8,17 @@ public class ThreadTask implements Runnable{
     }
 
     public void run(){
+
         try {
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         int size = this.stateName.length();
-        synchronized (MainClass.class){
-            MainClass.totalCount += size*size;
+        synchronized (JoinDemonAndThreadCompletionOrder.class){
+            JoinDemonAndThreadCompletionOrder.totalCount += size*size;
         }
+
+        System.out.println("completing thread: " + this.stateName);
     }
 }

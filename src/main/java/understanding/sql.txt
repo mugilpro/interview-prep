@@ -1,0 +1,29 @@
+CASE
+    WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+    WHEN Quantity = 30 THEN 'The quantity is 30'
+    ELSE 'The quantity is under 30'
+END AS QuantityText
+Easy:
+
+Students
+ID          NAME
+1           Samantha
+2           Julia
+3           Britney
+4           Kristeen
+5           Dyana
+
+Packages
+ID          SALARY
+1           15.5
+3           16.7
+5           31.5
+
+ID          NAME            SALARY
+1           Samantha        15.5
+2           Julia           0/null
+3           Britney         16.7
+4           Kristeen        0/null
+5           Dyana           31.5
+
+select s.id, s.name, p.salary from student s left join package p where s.id = p.id

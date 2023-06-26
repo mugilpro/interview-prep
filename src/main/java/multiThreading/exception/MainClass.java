@@ -1,5 +1,6 @@
 package multiThreading.exception;
-
+//Individual exception at each thread only after affects that thread no main thread
+//Have common exception handler in thread handle any exception thrown out of thread instead of printing it in console.
 public class MainClass {
 
     public static int totalCount = 0;
@@ -19,7 +20,7 @@ public class MainClass {
         thread2.start();
         thread3.start();
         thread4.start();
-        System.out.println(totalCount);
+        System.out.println("total:" +totalCount);
         thread1.join();
         thread2.join();
         thread3.join();

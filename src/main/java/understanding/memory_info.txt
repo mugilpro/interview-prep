@@ -1,0 +1,13 @@
+permgen(before java 8) / metaspace since java 8
+ -> static content in this memory section. This includes all the loaded classes metadata, static methods, primitive variables, and references to the static objects
+ -> permgen uses static memory defined borrowed from heap. While metaspace uses native system memory. so permgen can go out of space while metaspace increase dynamically
+    (MetaspaceSize and MaxMetaspaceSize and -XX:PermSize=[size] and -XX:MaxPermSize=[size])
+ ->String interns also part of permgen till java 6
+
+heapspace - Since java 8 it is break into  young gen (eden, s0, s1), old gen
+ ->Objects saved
+ ->if object survive GC in Eden it will be moved to s0 temporarily and from there it will be s1.
+ ->after some duration it will be moved to olg gen
+ ->String interns also part of heapspace since java 7
+
+

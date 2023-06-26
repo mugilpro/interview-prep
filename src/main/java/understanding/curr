@@ -1,0 +1,40 @@
+Design and Design Patterns: 20 mins
+
+Rule engine - better design pattern
+Observability design pattern impl // coding
+Social media real time ranking design
+
+Core Java: 15 mins
+"Hello","world","this","is","nice","day" //coding
+exception flow
+How do solve memory leak issue
+
+Spring: 10 mins
+How do you secure your api
+Cyclic dependency resolution:
+dependency exclusion
+
+SQL: 10 mins
+Students
+ID          NAME
+1           Samantha
+2           Julia
+3           Britney
+4           Kristeen
+5           Dyana
+
+Packages
+ID          SALARY
+1           15.5
+3           16.7
+5           31.5
+
+ID          NAME            SALARY
+1           Samantha        15.5
+2           Julia           0/null
+3           Britney         16.7
+4           Kristeen        0/null
+5           Dyana           31.5
+
+10 min:
+Print BST tree in order.

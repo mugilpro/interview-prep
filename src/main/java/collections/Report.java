@@ -10,19 +10,8 @@ public class Report {
     private int rank;
     private String grade;
 
-    public int getRank() {
-        return rank;
-    }
-
-    public void setRank(int rank) {
-        this.rank = rank;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
+    public int getRank() {return rank;}
+    public void setRank(int rank) {this.rank = rank;}
+    public String getGrade() {return grade;}
+    public void setGrade(String grade) {this.grade = grade;}
 }

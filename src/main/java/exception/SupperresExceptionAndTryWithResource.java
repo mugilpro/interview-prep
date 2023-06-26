@@ -3,7 +3,7 @@ package exception;
 import java.io.Closeable;
 import java.io.IOException;
 
-public class MainClass {
+public class SupperresExceptionAndTryWithResource {
     public static void main(String[] args) {
         try {
             try (ClosableClass closableClass = new ClosableClass()) {
@@ -12,13 +12,16 @@ public class MainClass {
             } catch (Exception e){
                 // We will get suppressed exception here from finally block
                 System.out.println("catch");
+                System.out.println(e.getMessage() + ":" +e.getSuppressed()[0].getMessage() + ":" + e.getSuppressed().length);
                 throw new RuntimeException("Inside catch");
             }finally {
                 System.out.println("finally");
+                throw new RuntimeException("Inside finally");
             }
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(e.getSuppressed().length);
         }
 
 

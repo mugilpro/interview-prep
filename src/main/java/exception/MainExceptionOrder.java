@@ -8,7 +8,9 @@ public class MainExceptionOrder {
     public static void main(String args[]){
         try{
             try{
-                throw new FileNotFoundException("ERROR");
+                System.out.println("starting");
+                if(1==1) throw new FileNotFoundException("ERROR");
+                System.out.println("ending");
             }catch (Exception e){
                 System.out.println("General inner Exception");
                 throw e;

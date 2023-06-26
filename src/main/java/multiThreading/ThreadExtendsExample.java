@@ -1,6 +1,6 @@
 package multiThreading;
-
-public class ChildExecute {
+//Thread instantiation using extends
+public class ThreadExtendsExample {
     public static void main(String[] args) {
         ThreadProg threadProg =  new ThreadProg();
         threadProg.start();

@@ -1,0 +1,2 @@
+Easy:
+Give list of string -> get the length

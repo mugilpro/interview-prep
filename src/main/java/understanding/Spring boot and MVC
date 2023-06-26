@@ -1,0 +1,46 @@
+https://dzone.com/articles/creating-a-web-application-with-spring-boot -- Spring mvc example - note ModelMap
+
+@Restcontroller don't require @ResponseBody annotation
+@Controller require @ResponseBody annotation if the endpoint return response rather than view
+
+@RequestMapping("/login", method = RequestMethod.POST)
+@PostMapping("/login")
+
+@RestController
+
+//HTTP method
+
+@PathVariable("id")
+@RequestParam(value = "city")
+@RequestHeader("accept-language")
+@RequestBody
+
+
+
+
+//PathVariable
+@RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
+public User getUser(@PathVariable("id") String id) {
+}
+
+//RequestBody
+http://testwebaddress.com/getInformation.do
+{
+   "city": "Sydney",
+   "country": "Australia"
+}
+public String getCountryFactors(@RequestBody Country countryFacts)
+    {
+        countryFacts.getCity();
+        countryFacts.getCountry();
+    }
+
+//
+
+http://testwebaddress.com/getInformation.do?city=Sydney&country=Australia
+
+public String getCountryFactors(@RequestParam(value = "city") String city,
+                    @RequestParam(value = "country") String country){ }
+
+
+

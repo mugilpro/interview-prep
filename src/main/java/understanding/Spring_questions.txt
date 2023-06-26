@@ -1,0 +1,36 @@
+Easy:
+
+@Service
+vs
+@Component
+
+@Configuration - use case
+
+@Qualifier -
+USValidationService - @Profile US
+UKValidationService - @Profile UK
+
+
+update
+http://abc.com/employee/1?region="uk"
+{
+    employee:{
+        name: "hello",
+        mobile: 9535381266
+            }
+}
+
+Authentication and authorization
+
+Medium:
+
+cyclic bean creation
+
+Hard:
+
+EncryptionBean - How do you configure it to be available to dependent system
+AOP proxy
+
+
+
+

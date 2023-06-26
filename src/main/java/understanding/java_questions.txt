@@ -1,0 +1,41 @@
+Lambda expression
+
+"Hello","world","this","is","nice","day"
+
+count of each word and skip words less than 3 chars
+
+easy: array of 5,5,4,4,3
+
+medium: 55443
+
+exception flow
+
+ public static void main(String[] args) {
+
+        callMathOper((a,b,c) -> {
+            if(c.equals("+")){
+                return a+b;
+            } else {
+                return 0;
+            }
+        });
+    }
+
+public static int callMathOper(??){
+        sout(//)
+    }
+
+
+Design Pattern:
+Lambda expr
+How do you secure your api
+Rest control impl
+Rule engine - better design pattern
+Social media real time ranking design
+Observability design pattern impl
+
+
+
+Tree set
+Social media real time ranking design
+sql

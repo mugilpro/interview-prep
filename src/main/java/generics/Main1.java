@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Main1 {
     public static void main(String args[]) {
-//        List<? super Integer> numbers = new ArrayList<Number>();
-//        List<? super Integer> intNumbers = new ArrayList<Integer>();
+        List<? super Integer> numbers = new ArrayList<Number>();
+        List<? super Integer> intNumbers = new ArrayList<Integer>();
 //        List<? super Integer> floatNumbers = new ArrayList<Float>();
 //
-//        Number value = numbers.get(0);
+        Object value = numbers.get(0);
 //        Integer intValue = intNumbers.get(0);
 //        Float floatValue = numbers.get(0);
 //
-//        numbers.add(new Integer(1));
-//        numbers.add(new Float(1));
+        numbers.add(Integer.valueOf(1));
+//        numbers.add(Float.valueOf(1));
     }
 }
