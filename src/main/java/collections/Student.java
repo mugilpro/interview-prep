@@ -1,7 +1,9 @@
 package collections;
 
 import java.math.BigDecimal;
-import java.util.Objects;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 //Condition                                              Required                        Not Required (But Allowed)
 //        x.equals(y) == true               x.hashCode() == y.hashCode()
@@ -26,6 +28,29 @@ public class Student {
         this.feeDue = feeDue;
     }
 
+    public static void main(String[] args) {
+        HashSet set1 =   new HashSet();
+        set1.add(new Student("KA", "C001", 1l, BigDecimal.valueOf(100l)));
+        set1.add(new Student("MH", "C001", 1l, BigDecimal.valueOf(100l)));
+        set1.add(new Student("KA", "C002", 1l, BigDecimal.valueOf(100l)));
+       ArrayList s =   new ArrayList();//new TreeSet<Object>();
+//        s.add //Object e  = new Student();
+        Stream t = s.stream();
+       s.add(new Student());
+       t.forEach(stu-> {
+           Student st = (Student)stu;
+           st.setCollegeCode("1"
+           );
+       });
+Consumer c = new Consumer(){
+    @Override
+    public void accept(Object o) {
+        Student st = (Student)o;
+        st.setCollegeCode("1");
+    }
+};
+        System.out.println(((Student)s.get(0)).getCollegeCode());
+    }
     public String getStateCode() {
         return stateCode;
     }
@@ -50,19 +75,19 @@ public class Student {
     public void setFeeDue(BigDecimal feeDue) {
         this.feeDue = feeDue;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return Objects.equals(collegeCode, student.collegeCode) && Objects.equals(stateCode, student.stateCode) && Objects.equals(seqId, student.seqId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(collegeCode, stateCode, seqId);
-    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Student student = (Student) o;
+//        return Objects.equals(collegeCode, student.collegeCode) && Objects.equals(stateCode, student.stateCode) && Objects.equals(seqId, student.seqId);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(collegeCode, stateCode, seqId);
+//    }
 }
 
 //    @Override

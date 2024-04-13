@@ -1,0 +1,169 @@
+AWS:
+private vs public subnet - 0.5
+NATGATEWAY - 0
+where does role and policies fit in - 1
+NACL- 
+AWS terraform alternative
+EKS vs ECS - 0 
+
+Terraform: 5
+
+module registry - 2
+terraform state file - 2
+terraform provider - 1
+
+JAVA:
+---------------4-
+Hash Set: 
+public class Student {
+    private String stateCode;
+    private String collegeCode;
+    private Long seqId;
+    private BigDecimal feeDue;
+
+    public Student() {
+    }
+
+    public Student( String stateCode, String collegeCode,Long seqId, BigDecimal feeDue) {
+        this.collegeCode = collegeCode;
+        this.stateCode = stateCode;
+        this.seqId = seqId;
+        this.feeDue = feeDue;
+    }
+
+    public String getStateCode() {
+        return stateCode;
+    }
+    public void setStateCode(String stateCode) {
+        this.stateCode = stateCode;
+    }
+    public String getCollegeCode() {
+        return collegeCode;
+    }
+    public void setCollegeCode(String collegeCode) {
+        this.collegeCode = collegeCode;
+    }
+    public Long getSeqId() {
+        return seqId;
+    }
+    public void setSeqId(Long seqId) {
+        this.seqId = seqId;
+    }
+    public BigDecimal getFeeDue() {
+        return feeDue;
+    }
+    public void setFeeDue(BigDecimal feeDue) {
+        this.feeDue = feeDue;
+    }
+}
+public class Main {
+public static void main(String[] args) {
+        HashSet set1 =   new HashSet();
+        set1.add(new Student("KA", "C001", 1, BigDecimal.valueOf(100l)));
+        set1.add(new Student("MH", "C001", 1, BigDecimal.valueOf(100l)));
+        set1.add(new Student("KA", "C002", 1, BigDecimal.valueOf(100l)));
+}
+}
+
+
+---------------1p---
+List< Number> numbers = new ArrayList<Number>();
+List< Number> intNumbers = new ArrayList<Integer>();
+List<? extends Number> numbersExtend = new ArrayList<Number>();
+
+
+
+Lambda:
+Funtional interface --1p
+--2p
+    public static ArrayList<UserDto> getUser(List<User> userList){
+        ArrayList<UserDto> userDto = new ArrayList<>();
+            for(User u: userList){
+                if(!u.isExpired()){
+                    userDto.add(new UserDto(u.getId(),u.getName()));
+                }
+            }
+        return userDto;
+    }
+
+--2p
+    public static UserDto getUser(List<User> userList){
+        ArrayList<UserDto> userDto = new ArrayList<>();
+        for(User u: userList){
+            if(!u.isExpired()){
+                userDto.add(new UserDto(u.getId(),u.getName()));
+            }
+        }
+        return userDto.size()> 0 ? userDto.get(userDto.size()-1): null;
+    }
+
+ExecutorService/Future
+
+Spring:
+@Configuration - use case -- 1p
+ 
+@Qualifier - 2p
+USValidationService - @Profile US
+UKValidationService - @Profile UK
+
+--3p
+cyclic bean creation
+
+public class First {
+    private Second second;
+    public First(Second second) {
+        System.out.println("creating first");
+    }
+
+    public Second getSecond() {
+        System.out.println("second getting second");
+        return second;
+    }
+
+    public void setSecond(Second second) {
+        System.out.println("second setting second");
+        this.second = second;
+    }
+}
+
+public class Second {
+
+    private First first;
+
+    public Second(First first) {
+        System.out.println("creating second");
+    }
+
+    public First getFirst() {
+        System.out.println("second getting first");
+        return first;
+    }
+
+    public void setFirst(First first) {
+        System.out.println("second setting first");
+        this.first = first;
+    }
+}
+
+Spring Rest:
+Update user by accepting id as path variable
+--4p
+public class User{
+    public Long id;
+    public String name;
+    public String city;
+    public String country;
+}
+
+{
+   "name": "XYZ"
+   "city": "Sydney",
+   "country": "Australia"
+}
+
+
+Authentication/Authorization
+
+LB understand system is up
+
+what is there in JAVA metaspace

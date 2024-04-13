@@ -4,7 +4,6 @@ public class Second {
 
     private First first;
 
-    @Autowired
     public Second(First first) {
         System.out.println("creating second");
     }
